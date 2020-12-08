@@ -1,0 +1,169 @@
+.position() {
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+.raleway(@fz, @fw) {
+    font-family: Raleway;
+    font-size: @fz;
+    line-height: 1.2;
+    font-weight: @fw;
+    color: #ffffff;
+}
+
+.montserrat(@fz, @fw) {
+    font-family: Montserrat;
+    font-size: @fz;
+    line-height: 1.2;
+    font-weight: @fw;
+    color: #ffffff;   
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 1920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.header {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/Photo.png);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .position();
+    &-logo {
+        fill: white;
+        margin: 0 217px 0 0;
+        display: flex;
+        &-txt {
+            .raleway(34px, 400);
+            letter-spacing: -0.04em;
+            margin: auto;
+            }
+        }
+    &-menu {
+        display: flex;
+        list-style-type: none;
+        &-item {
+            text-decoration: none;
+            .montserrat(14px, 300);
+            margin: 16px 30px 16px 0;
+            }
+        &-item:active {
+            color: #C7B299;
+            }
+        &-item:hover {
+            cursor: pointer;
+            }
+    }
+    &-card,
+    &-search  {
+        margin: 16px 0 0 30px;
+        fill: #ffffff;
+    }
+    &-card:active,
+    &-search:active {
+        fill: #C7B299;
+    }
+    &-card:hover,
+    &-search:hover {
+        cursor: pointer;
+    }
+    
+    &-content {
+        display: flex;
+        width: 100%;
+        padding: 0 150px;
+        justify-content: space-between;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        margin: 285px 0 0 0;
+        &-left,
+        &-right {
+           fill: #ffffff;
+           margin: 100px 0 0 0;
+        }
+        &-left:active,
+        &-right:active {
+           fill: #C7B299;
+        }
+        &-left:hover,
+        &-right:hover {
+            cursor: pointer;
+        }
+        &-main {
+            max-width: 600px;
+            margin: 0 0 323px 0;
+            display: flex;
+            flex-direction: column;
+            &-titletop {
+                .raleway(36px, 500);
+                text-align: center;
+                margin: 0 0 4px 0;
+            }
+            &-titlebold {
+                .raleway(52px, 800);
+                margin: 0 0 10px 0;
+            }
+            &-text {
+                .montserrat(16px, 300);
+                text-align: center;
+                margin: 0 0 48px 0;
+            }
+            &-button {
+                display: block;
+                .raleway (14px, 800);
+                line-height: 23px;
+                text-transform: uppercase;
+                min-width: 170px;
+                background-color: #998675;
+                padding: 15px 39px;
+                border: 0px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                margin: 0 auto;
+                border-radius: 3px;
+            }
+            &-button:active {
+                background-color: #fff;
+                color: #998675;
+            }
+            &-button:hover {
+                cursor: pointer;
+            }
+        }
+        &-radio {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            &-label {
+                position: relative;
+                padding: 0 20px 0 0;
+            }
+            &-label:before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            &-item {
+                display: none;
+            }
+            &-item:checked + &-label:before {
+                background-color: black;
+                box-shadow: 0 0 0 2.5px #D3C1AD;
+            }
+            &-label:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
