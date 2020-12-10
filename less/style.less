@@ -86,7 +86,7 @@ body {
         width: 200px;
         transition: width 1s ease-out;
     }
-    .header-search-button:focus {
+    &-search-button:focus {
         width: 200px;
     }
     &-card {
@@ -121,13 +121,14 @@ body {
            fill: #ffffff;
            margin: 100px 0 0 0;
         }
-        &-left:active,
-        &-right:active {
-           fill: #C7B299;
-        }
         &-left:hover,
         &-right:hover {
             cursor: pointer;
+            fill: #C7B299;
+        }
+        &-left:active,
+        &-right:active {
+           fill: #ffffff;
         }
         &-main {
             max-width: 600px;
@@ -160,14 +161,17 @@ body {
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
                 margin: 0 auto;
+                border-bottom: 3px solid #998675;
                 border-radius: 3px;
-            }
-            &-button:active {
-                background-color: #fff;
-                color: #998675;
             }
             &-button:hover {
                 cursor: pointer;
+                background-color: #fff;
+                color: #998675;
+            }
+            &-button:active {
+                background-color: #998675;
+                color: #ffffff;
             }
         }
         &-radio {
