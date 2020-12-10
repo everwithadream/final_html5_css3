@@ -1,3 +1,52 @@
+@font-face {
+  font-family: 'montserratlight';
+  src: url('../fonts/montserrat-light.eot');
+  src: url('../fonts/montserrat-light.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-light.woff2') format('woff2'), url('../fonts/montserrat-light.woff') format('woff'), url('../fonts/montserrat-light.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserratregular';
+  src: url('../fonts/montserrat-regular.eot');
+  src: url('../fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-regular.woff2') format('woff2'), url('../fonts/montserrat-regular.woff') format('woff'), url('../fonts/montserrat-regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ralewaybold';
+  src: url('../fonts/raleway-bold.eot');
+  src: url('../fonts/raleway-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-bold.woff2') format('woff2'), url('../fonts/raleway-bold.woff') format('woff'), url('../fonts/raleway-bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ralewayextrabold';
+  src: url('../fonts/raleway-extrabold.eot');
+  src: url('../fonts/raleway-extrabold.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-extrabold.woff2') format('woff2'), url('../fonts/raleway-extrabold.woff') format('woff'), url('../fonts/raleway-extrabold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ralewaymedium';
+  src: url('../fonts/raleway-medium.eot');
+  src: url('../fonts/raleway-medium.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-medium.woff2') format('woff2'), url('../fonts/raleway-medium.woff') format('woff'), url('../fonts/raleway-medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ralewayregular';
+  src: url('../fonts/raleway-regular.eot');
+  src: url('../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-regular.woff2') format('woff2'), url('../fonts/raleway-regular.woff') format('woff'), url('../fonts/raleway-regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ralewaysemibold';
+  src: url('../fonts/raleway-semibold.eot');
+  src: url('../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-semibold.woff2') format('woff2'), url('../fonts/raleway-semibold.woff') format('woff'), url('../fonts/raleway-semibold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
 }
@@ -31,10 +80,8 @@ body {
   text-decoration: none;
 }
 .header-logo-txt {
-  font-family: Raleway;
+  font-family: ralewayregular, sans-serif;
   font-size: 34px;
-  line-height: 1.2;
-  font-weight: 400;
   color: #ffffff;
   letter-spacing: -0.04em;
   margin: auto;
@@ -55,10 +102,8 @@ body {
 }
 .header-menu-item {
   text-decoration: none;
-  font-family: Montserrat;
+  font-family: montserratlight, sans-serif;
   font-size: 14px;
-  line-height: 1.2;
-  font-weight: 300;
   color: #ffffff;
   margin: 16px 30px 16px 0;
 }
@@ -154,38 +199,28 @@ body {
           flex-direction: column;
 }
 .header-content-main-titletop {
-  font-family: Raleway;
+  font-family: ralewaymedium, sans-serif;
   font-size: 36px;
-  line-height: 1.2;
-  font-weight: 500;
   color: #ffffff;
   text-align: center;
   margin: 0 0 4px 0;
 }
 .header-content-main-titlebold {
-  font-family: Raleway;
+  font-family: ralewayextrabold, sans-serif;
   font-size: 52px;
-  line-height: 1.2;
-  font-weight: 800;
   color: #ffffff;
   margin: 0 0 10px 0;
 }
 .header-content-main-text {
-  font-family: Montserrat;
+  font-family: montserratlight, sans-serif;
   font-size: 16px;
-  line-height: 1.2;
-  font-weight: 300;
   color: #ffffff;
   text-align: center;
   margin: 0 0 48px 0;
 }
 .header-content-main-button {
   display: block;
-  font-family: Raleway;
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 800;
-  color: #ffffff;
+  font-family: ralewayextrabold, sans-serif;
   line-height: 23px;
   text-transform: uppercase;
   min-width: 170px;
@@ -194,9 +229,10 @@ body {
   border: 0px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0 auto;
   border-bottom: 3px solid #998675;
   border-radius: 3px;
+  color: #ffffff;
+  margin: 0 auto;
 }
 .header-content-main-button:hover {
   cursor: pointer;
@@ -240,4 +276,145 @@ body {
 }
 .header-content-radio-label:hover {
   cursor: pointer;
+}
+.content {
+  padding: 0px;
+}
+.content-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 80px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.content-top-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 270px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 15px;
+}
+.content-top-card-icon {
+  display: block;
+  fill: #555555;
+  margin: 0 0 24px 0;
+}
+.content-top-card-title {
+  width: 100%;
+  margin: 0 0 16px 0;
+  text-align: center;
+  color: #555555;
+}
+.content-top-card-txt {
+  text-align: center;
+}
+.content-top-card:after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: #F1EEE9;
+}
+.content-top-card:hover .content-top-card-icon {
+  fill: #C7B299;
+}
+.content-top-card:hover .content-top-card-title {
+  color: #C7B299;
+}
+.content-top-card:hover:after {
+  background-color: #C7B299;
+}
+.content-ideas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 77px 0 0 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #FBFAF8;
+}
+.content-ideas-title {
+  max-width: 500px;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+.content-ideas-txt {
+  max-width: 770px;
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+.content-ideas-img {
+  width: 1230px;
+  min-height: 482px;
+  background-image: url(../img/browser-center.png), url(../img/browser-left.png), url(../img/browser-right.png);
+  background-size: 62.5%, 62.5%, 62.5%;
+  background-repeat: no-repeat;
+  background-position: bottom center, bottom left, bottom right;
+}
+.content-ad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 375px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+  background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+}
+.content-ad-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.content-ad-txt-title-word {
+  display: inline;
+}
+.content-ad-button {
+  display: block;
+  font-family: ralewayextrabold, sans-serif;
+  line-height: 23px;
+  text-transform: uppercase;
+  min-width: 170px;
+  background-color: #998675;
+  padding: 15px 39px;
+  border: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 3px solid #998675;
+  border-radius: 3px;
+  color: #ffffff;
+  margin: 7px 0;
+}
+.content-ad-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #998675;
+}
+.content-ad-button:active {
+  background-color: #998675;
+  color: #ffffff;
 }

@@ -1,22 +1,109 @@
-.position() {
-    padding: 40px 0;
+.position(@padding) {
+    padding: @padding 0;
     box-sizing: border-box;
 }
 
-.raleway(@fz, @fw) {
-    font-family: Raleway;
-    font-size: @fz;
-    line-height: 1.2;
-    font-weight: @fw;
+@font-face {
+    font-family: 'montserratlight';
+    src: url('../fonts/montserrat-light.eot');
+    src: url('../fonts/montserrat-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-light.woff2') format('woff2'),
+         url('../fonts/montserrat-light.woff') format('woff'),
+         url('../fonts/montserrat-light.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular.eot');
+    src: url('../fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular.woff2') format('woff2'),
+         url('../fonts/montserrat-regular.woff') format('woff'),
+         url('../fonts/montserrat-regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold.eot');
+    src: url('../fonts/raleway-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold.woff2') format('woff2'),
+         url('../fonts/raleway-bold.woff') format('woff'),
+         url('../fonts/raleway-bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayextrabold';
+    src: url('../fonts/raleway-extrabold.eot');
+    src: url('../fonts/raleway-extrabold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-extrabold.woff2') format('woff2'),
+         url('../fonts/raleway-extrabold.woff') format('woff'),
+         url('../fonts/raleway-extrabold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('../fonts/raleway-medium.eot');
+    src: url('../fonts/raleway-medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-medium.woff2') format('woff2'),
+         url('../fonts/raleway-medium.woff') format('woff'),
+         url('../fonts/raleway-medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular.eot');
+    src: url('../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-regular.woff2') format('woff2'),
+         url('../fonts/raleway-regular.woff') format('woff'),
+         url('../fonts/raleway-regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('../fonts/raleway-semibold.eot');
+    src: url('../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-semibold.woff2') format('woff2'),
+         url('../fonts/raleway-semibold.woff') format('woff'),
+         url('../fonts/raleway-semibold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.button() {
+    display: block;
+    font-family: ralewayextrabold, sans-serif;
+    line-height: 23px;
+    text-transform: uppercase;
+    min-width: 170px;
+    background-color: #998675;
+    padding: 15px 39px;
+    border: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 3px solid #998675;
+    border-radius: 3px;
     color: #ffffff;
 }
 
-.montserrat(@fz, @fw) {
-    font-family: Montserrat;
-    font-size: @fz;
-    line-height: 1.2;
-    font-weight: @fw;
-    color: #ffffff;   
+.buttonhover() {
+    cursor: pointer;
+    background-color: #fff;
+    color: #998675;
+}
+.buttonactive() {
+    background-color: #998675;
+    color: #ffffff;
 }
 
 body {
@@ -34,14 +121,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    .position();
+    .position(40px);
     &-logo {
         fill: white;
         margin: 0 217px 0 0;
         display: flex;
         text-decoration: none;
         &-txt {
-            .raleway(34px, 400);
+            font-family: ralewayregular, sans-serif;
+            font-size: 34px;
+            color: #ffffff;
             letter-spacing: -0.04em;
             margin: auto;
             }
@@ -58,7 +147,9 @@ body {
         flex-wrap: wrap;
         &-item {
             text-decoration: none;
-            .montserrat(14px, 300);
+            font-family: montserratlight, sans-serif;
+            font-size: 14px;
+            color: #ffffff;
             margin: 16px 30px 16px 0;
             }
         &-item:hover {
@@ -136,42 +227,34 @@ body {
             display: flex;
             flex-direction: column;
             &-titletop {
-                .raleway(36px, 500);
+                font-family: ralewaymedium, sans-serif;
+                font-size: 36px;
+                color: #ffffff;
                 text-align: center;
                 margin: 0 0 4px 0;
             }
             &-titlebold {
-                .raleway(52px, 800);
+                font-family: ralewayextrabold, sans-serif;
+                font-size: 52px;
+                color: #ffffff;
                 margin: 0 0 10px 0;
             }
             &-text {
-                .montserrat(16px, 300);
+                font-family: montserratlight, sans-serif;
+                font-size: 16px;
+                color: #ffffff;
                 text-align: center;
                 margin: 0 0 48px 0;
             }
             &-button {
-                display: block;
-                .raleway (14px, 800);
-                line-height: 23px;
-                text-transform: uppercase;
-                min-width: 170px;
-                background-color: #998675;
-                padding: 15px 39px;
-                border: 0px;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+                .button();
                 margin: 0 auto;
-                border-bottom: 3px solid #998675;
-                border-radius: 3px;
             }
             &-button:hover {
-                cursor: pointer;
-                background-color: #fff;
-                color: #998675;
+                .buttonhover();
             }
             &-button:active {
-                background-color: #998675;
-                color: #ffffff;
+                .buttonactive();
             }
         }
         &-radio {
@@ -202,6 +285,108 @@ body {
             &-label:hover {
                 cursor: pointer;
             }
+        }
+    }
+}
+
+.content {
+    padding: 0px;
+    &-top {
+        display: flex;
+        justify-content: center;
+        padding: 80px 0;
+        flex-wrap: wrap;
+        &-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 270px;
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0 15px;
+            &-icon {
+                display: block;
+                fill: #555555;
+                margin: 0 0 24px 0;
+            }
+            &-title {
+                width: 100%;
+                margin: 0 0 16px 0;
+                text-align: center;
+                color:#555555;
+            }
+            &-txt {
+                text-align: center;
+            }
+        }
+        &-card:after {
+            content: "";
+            display: block;
+            width: 150px;
+            height: 3px;
+            background-color: #F1EEE9;
+        }
+        &-card:hover .content-top-card-icon {
+            fill:#C7B299;
+        }
+        &-card:hover .content-top-card-title {
+            color:#C7B299;
+        }
+        &-card:hover:after {
+            background-color:#C7B299;
+        }
+    }
+    &-ideas {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 77px 0 0 0;
+        flex-wrap: wrap;
+        background-color: #FBFAF8;
+        &-title {
+            max-width: 500px;
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+        &-txt {
+            max-width: 770px;
+            margin: 0 0 40px 0;
+            text-align: center;
+        }
+        &-img {
+            width: 1230px;
+            min-height: 482px;
+            background-image: url(../img/browser-center.png),
+            url(../img/browser-left.png),
+            url(../img/browser-right.png);
+            background-size: 62.5%, 62.5%, 62.5%;
+            background-repeat: no-repeat;
+            background-position: bottom center, bottom left, bottom right;
+        }
+    }
+    &-ad {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 375px;
+        background-image: linear-gradient( 90deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+        &-txt {
+            display: flex;
+            flex-direction: column;
+            &-title {
+                &-word {
+                    display: inline;
+                }
+            }
+        }
+        &-button {
+            .button();
+            margin: 7px 0;
+        }
+        &-button:hover {
+            .buttonhover();
+        }
+        &-button:active {
+            .buttonactive();
         }
     }
 }
