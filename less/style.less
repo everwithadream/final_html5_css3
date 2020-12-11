@@ -1,8 +1,3 @@
-.position(@padding) {
-    padding: @padding 0;
-    box-sizing: border-box;
-}
-
 @font-face {
     font-family: 'montserratlight';
     src: url('../fonts/montserrat-light.eot');
@@ -82,12 +77,12 @@
 
 .button() {
     display: block;
-    font-family: ralewayextrabold, sans-serif;
+    font-family: ralewayextrabold;
     line-height: 23px;
     text-transform: uppercase;
     min-width: 170px;
     background-color: #998675;
-    padding: 15px 39px;
+    padding: 14px 30px;
     border: 0px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -120,18 +115,19 @@ body {
     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/Photo.png);
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    .position(40px);
+    padding: 40px 0;
+    box-sizing: border-box;
     &-logo {
         fill: white;
-        margin: 0 217px 0 0;
+        margin: 0 217px 0 375px;
         display: flex;
         text-decoration: none;
         &-txt {
-            font-family: ralewayregular, sans-serif;
+            font-family: ralewayregular;
             font-size: 34px;
             color: #ffffff;
             letter-spacing: -0.04em;
+            padding: 0 0 0 3px;
             margin: auto;
             }
         }
@@ -145,9 +141,10 @@ body {
         display: flex;
         list-style-type: none;
         flex-wrap: wrap;
+        padding: 0 0 0 0;
         &-item {
             text-decoration: none;
-            font-family: montserratlight, sans-serif;
+            font-family: montserratlight;
             font-size: 14px;
             color: #ffffff;
             margin: 16px 30px 16px 0;
@@ -162,8 +159,7 @@ body {
     }
     &-search  {
         display: flex;
-        align-items: top;
-        margin: 16px 0 0 30px;
+        margin: 16px 0 0 25px;
         fill: #ffffff;
         &-button {
             width: 0px;
@@ -181,7 +177,7 @@ body {
         width: 200px;
     }
     &-card {
-        margin: 16px 0 0 30px;
+        margin: 16px 0 0 23px;
         fill: #ffffff;
         border: 0px;
         height: 24px;
@@ -206,7 +202,7 @@ body {
         justify-content: space-between;
         box-sizing: border-box;
         flex-wrap: wrap;
-        margin: 285px 0 0 0;
+        margin: 280px 0 0 0;
         &-left,
         &-right {
            fill: #ffffff;
@@ -222,26 +218,27 @@ body {
            fill: #ffffff;
         }
         &-main {
-            max-width: 600px;
-            margin: 0 0 323px 0;
+            max-width: 605px;
+            margin: 0 0 325px 0;
             display: flex;
             flex-direction: column;
             &-titletop {
-                font-family: ralewaymedium, sans-serif;
+                font-family: ralewaymedium;
                 font-size: 36px;
                 color: #ffffff;
                 text-align: center;
                 margin: 0 0 4px 0;
             }
             &-titlebold {
-                font-family: ralewayextrabold, sans-serif;
+                font-family: ralewayextrabold;
                 font-size: 52px;
                 color: #ffffff;
-                margin: 0 0 10px 0;
+                margin: 0 0 14px 0;
             }
             &-text {
-                font-family: montserratlight, sans-serif;
+                font-family: montserratlight;
                 font-size: 16px;
+                line-height: 24px;
                 color: #ffffff;
                 text-align: center;
                 margin: 0 0 48px 0;
@@ -257,33 +254,25 @@ body {
                 .buttonactive();
             }
         }
-        &-radio {
+        &-pagination {
             width: 100%;
             display: flex;
             justify-content: center;
-            &-label {
-                position: relative;
-                padding: 0 20px 0 0;
-            }
-            &-label:before {
-                content: "";
+            &-item {
+                display: block;
                 width: 10px;
                 height: 10px;
                 background-color: #fff;
                 border-radius: 50%;
-                position: absolute;
-                top: 0px;
-                left: 0px;
+                margin: 4px 12px 0 0;
             }
-            &-item {
-                display: none;
+            .header-content-pagination-item:nth-child(5) {
+                margin: 4px 0 0 0;
             }
-            &-item:checked + &-label:before {
-                background-color: black;
-                box-shadow: 0 0 0 2.5px #D3C1AD;
-            }
-            &-label:hover {
+            &-item:hover {
                 cursor: pointer;
+                background-color:  black;
+                box-shadow: 0 0 0 2.5px #D3C1AD;
             }
         }
     }
@@ -307,50 +296,82 @@ body {
             &-icon {
                 display: block;
                 fill: #555555;
-                margin: 0 0 24px 0;
+                margin: 0 0 27px 0;
             }
             &-title {
+                font-family: ralewaysemibold;
+                font-size: 22px;
                 width: 100%;
                 margin: 0 0 16px 0;
                 text-align: center;
                 color:#555555;
             }
             &-txt {
+                font-family: montserratlight;
+                line-height: 24px;
+                font-size: 14px;
                 text-align: center;
+                color: #8C8C8C;
+                margin: 0;
+            }
+        }
+        .content-top-card:nth-child(2) {
+            .content-top-card-icon {
+                padding: 9px 0 0 3px;
+            }
+        }
+        .content-top-card:nth-child(3) {
+            .content-top-card-icon {
+                padding: 5px 0 0 0;
+            }
+        }
+        .content-top-card:nth-child(4) {
+            .content-top-card-icon {
+                padding: 13px 0 0 10px;
             }
         }
         &-card:after {
             content: "";
             display: block;
-            width: 150px;
+            width: 70px;
             height: 3px;
             background-color: #F1EEE9;
+            margin: 25px 0 0 0;
         }
         &-card:hover .content-top-card-icon {
             fill:#C7B299;
+            cursor: pointer;
         }
         &-card:hover .content-top-card-title {
             color:#C7B299;
+            cursor: pointer;
         }
         &-card:hover:after {
             background-color:#C7B299;
+            cursor: pointer;
         }
     }
     &-ideas {
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 77px 0 0 0;
+        padding: 75px 0 0 0;
         flex-wrap: wrap;
         background-color: #FBFAF8;
         &-title {
+            font-family: ralewaysemibold;
+            font-size: 30px;
+            color: #555555;
             max-width: 500px;
-            margin: 0 0 20px 0;
+            margin: 0 0 16px 0;
             text-align: center;
         }
         &-txt {
+            font-family: montserratlight;
+            font-size: 16px;
+            line-height: 28px;
             max-width: 770px;
-            margin: 0 0 40px 0;
+            margin: 0 0 32px 0;
             text-align: center;
         }
         &-img {
@@ -367,15 +388,26 @@ body {
     &-ad {
         display: flex;
         justify-content: space-between;
-        padding: 40px 375px;
+        padding: 40px 375px 44px 375px;
         background-image: linear-gradient( 90deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
         &-txt {
             display: flex;
             flex-direction: column;
             &-title {
+                font-family: ralewayregular;
+                font-size: 28px;
+                color: #ffffff;
+                margin: 5px 0 0 0;
                 &-word {
+                    color: #C7B299;
                     display: inline;
                 }
+            }
+            &-text {
+                margin: 6px 0 0 0;
+                font-family: montserratlight;
+                font-size: 18px;
+                color: #615855;
             }
         }
         &-button {
