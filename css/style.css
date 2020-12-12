@@ -69,7 +69,7 @@ body {
           box-sizing: border-box;
 }
 .header-logo {
-  fill: white;
+  fill: #ffffff;
   margin: 0 217px 0 375px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,6 +89,12 @@ body {
 }
 .header-logo:hover .header-logo-txt {
   color: #C7B299;
+}
+.header-logo:active {
+  fill: #ffffff;
+}
+.header-logo:active .header-logo-txt {
+  color: #ffffff;
 }
 .header-menu {
   display: -webkit-box;
@@ -119,21 +125,32 @@ body {
   display: flex;
   margin: 16px 0 0 25px;
   fill: #ffffff;
+  position: relative;
 }
 .header-search-button {
-  width: 0px;
-  height: 24px;
+  width: 0;
+  min-height: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ffffff;
+  border: none;
+  position: absolute;
+  top: 40px;
+  left: -100px;
+  color: black;
+  font-size: 16px;
+  font-family: Arial;
+  text-transform: capitalize;
   padding: 0;
-  border: 0px;
   margin: 0 3px 0 0;
-}
-.header-search:hover .header-search-button {
-  width: 200px;
-  -webkit-transition: width 1s ease-out;
-  transition: width 1s ease-out;
 }
 .header-search-button:focus {
   width: 200px;
+  min-height: 24px;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+  border: 2px solid #fff;
 }
 .header-card {
   margin: 16px 0 0 23px;
