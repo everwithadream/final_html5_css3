@@ -471,7 +471,7 @@ body {
   color: #ffffff;
 }
 .content-project {
-  padding: 75px 0 80px 0;
+  padding: 75px 0 76px 0;
   max-width: 1170px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -496,16 +496,17 @@ body {
 .content-project-txt {
   font-family: montserratlight;
   font-size: 16px;
-  margin: 0 auto 38px auto;
+  margin: 0 auto 34px auto;
   color: #8C8C8C;
   max-width: 770px;
   text-align: center;
+  line-height: 26px;
 }
 .content-project-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 605px;
+  width: 605px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 auto 40px auto;
@@ -543,7 +544,7 @@ body {
           justify-content: space-between;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 0 40px 0;
+  margin: 0 0 10px 0;
 }
 .content-project-cards-card {
   width: 370px;
@@ -555,7 +556,7 @@ body {
   display: block;
 }
 .content-project-cards-card-text {
-  padding: 25px 28px;
+  padding: 25px 28px 8px 28px;
   background-color: #FBFAF8;
 }
 .content-project-cards-card-text-title {
@@ -666,6 +667,9 @@ body {
 }
 .content-video {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .content-video-file {
   width: 100%;
@@ -677,7 +681,7 @@ body {
 .content-video-text {
   position: absolute;
   top: 210px;
-  left: 35%;
+  left: 35.2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,7 +726,8 @@ body {
   font-size: 16px;
   color: #ffffff;
   text-align: center;
-  margin: 0 0 33px 0;
+  margin: 0 0 36px 0;
+  line-height: 24px;
 }
 .content-video-text-time {
   font-family: montserratregular;
@@ -734,11 +739,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   min-height: 695px;
-  background: url('../img/hand.png') 22% bottom no-repeat;
+  background: url('../img/hand.png') 28.2% bottom no-repeat;
   background-color: #FBFAF8;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 189px 0 0 44%;
+  padding: 189px 0 0 45.6%;
 }
 .content-mobile-text {
   width: 672px;
@@ -762,13 +767,31 @@ body {
   font-family: montserratlight;
   font-size: 16px;
   color: #8C8C8C;
-  margin: 0 0 37px 0;
+  margin: 0 0 32px 0;
+  line-height: 27px;
 }
 .content-mobile-text-list {
-  margin: 0 0 0 100px;
+  padding: 0 0 0 100px;
+  margin: 0;
 }
 .content-mobile-text-list-item {
+  font-family: montserratlight;
+  font-size: 16px;
   list-style: none;
+  line-height: 32px;
+  color: #8C8C8C;
+  position: relative;
+}
+.content-mobile-text-list-item:before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-image: url('../img/marker.png');
+  background-size: cover;
+  position: absolute;
+  top: 4px;
+  left: -50px;
 }
 .content-numbers {
   display: -webkit-box;
@@ -781,7 +804,7 @@ body {
   background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 69px 24% 60px 24%;
+  padding: 70px 25% 60px 25%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -799,6 +822,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 170px;
 }
 .content-numbers-item-title {
   font-family: montserratextralight;
@@ -811,6 +835,7 @@ body {
   font-size: 14px;
   color: #C7B299;
   text-transform: uppercase;
+  margin: 0;
 }
 .content-numbers-item:after {
   content: "";
@@ -818,5 +843,5 @@ body {
   width: 30px;
   height: 2px;
   background-color: #FFFFFF;
-  margin: 25px 0 0 0;
+  margin: 28px 0 0 0;
 }
