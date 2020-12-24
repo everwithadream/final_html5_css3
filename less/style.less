@@ -864,6 +864,18 @@ body {
             &-item:hover .content-posts-cards-item-text {
                 color: #FFFFFF;
             }
+            &-item:hover .content-posts-cards-item-link {
+                color: #FFFFFF;
+            }
+            &-item:active .content-posts-cards-item-link {
+                color: #C7B299;
+            }
+            &-item:hover .content-posts-cards-item-link::after {
+                border-left: 5px solid #FFFFFF;
+            }
+            &-item:active .content-posts-cards-item-link::after {
+                border-left: 5px solid #C7B299;
+            }
         }
         &-buttons {
             margin:40px 0 0 0;
@@ -955,13 +967,22 @@ body {
                 content: "";
                 display: block;
                 position: absolute;
-                top: 275px;
+                top: 273px;
                 left: 83px;
                 border: 5px solid transparent;
                 border-left: 5px solid #D1D1D1;
             }
             .footer-top-article-link:hover {
                 color: #C7B299;
+            }
+            .footer-top-article-link:hover:after {
+                border-left: 5px solid #C7B299;
+            }
+            .footer-top-article-link:active {
+                color: #D1D1D1;
+            }
+            .footer-top-article-link:active:after {
+                border-left: 5px solid #D1D1D1;
             }
         }
         &-posts {
@@ -985,6 +1006,7 @@ body {
                 &-time {
                     font-size: 12px;
                     color: #363636;
+                    display: block;
                 }
             }
             &-link:hover {
