@@ -149,7 +149,6 @@ body {
   color: black;
   font-size: 16px;
   font-family: Arial;
-  text-transform: capitalize;
   padding: 0;
   margin: 0 3px 0 0;
 }
@@ -1318,8 +1317,7 @@ body {
   .header-menu-item {
     margin: 0;
     width: 100%;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    font-size: 20px;
   }
   .header-card {
     margin: 0 auto;
@@ -1328,6 +1326,13 @@ body {
   .header-search {
     margin: 0;
     display: block;
+  }
+  .header-search-button {
+    left: 10%;
+    height: 40px;
+  }
+  .header-search-button:focus {
+    width: 80%;
   }
   .header-content {
     display: none;
@@ -1421,6 +1426,9 @@ body {
   .content-project-buttons {
     width: 100%;
     margin: 0 0 20px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .content-project-buttons-item {
     padding: 7px;
